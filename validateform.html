@@ -1,0 +1,122 @@
+<title> Data Validation </title> 
+<script language="javascript"> 
+function validate() 
+{ 
+var un=new RegExp("^[a-zA-Z]+$","g"); 
+var pw=new RegExp("^[a-zA-Z0-9]+$","g"); 
+var mob=new RegExp("^[0-9]+$","g"); 
+var em=new RegExp("^[a-zA-Z0-9_.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,4}$","g"); 
+var uname=document.f1.t1.value; 
+var pwd=document.f1.t2.value; 
+var mobile=document.f1.t3.value; 
+var email=document.f1.t4.value; 
+if(uname.match(un)){ 
+ if(uname.length>=6)  { 
+  if(pwd.match(pw))   { 
+   if(pwd.length>=8)      { 
+       if(mobile.match(mob))       { 
+         if(mobile.length==10)   { 
+              if(email.match(em))    { 
+                alert("Form is submitted successfully"); 
+               } 
+else  { 
+
+ 
+                  alert("Invalid email");       }} 
+             else{ 
+               alert("Mobile number should be 10 digits");    }           } 
+           else { 
+             alert("Invalid mobile number");   }          } 
+          else   { 
+             alert("password must be atleast 8 characters");     }        } 
+        else   { 
+           alert("Invalid password");     }      } 
+      else   { 
+         alert("user name must have atleast 6 characters");      }     } 
+else{ 
+ alert("Invalid user name");}} 
+</script></head> 
+<body background="nature1.jpg" height="100%" width="100%">
+ <center>
+  <table>
+
+  <form>
+    <tr> 
+     <td>Firstname:<br></td>
+	 <td><input type="text" placeholder="enter first name"><br></td>
+	 </tr>
+	 <tr>
+     <td>Middlename:<br></td>
+	 <td><input type="text" placeholder="enter middle name"><br></td>
+	 </tr>
+	 <tr>
+    <td>Lastname:</td>
+	<td><input type="text" placeholder="enter last name"><br></td>
+	</tr>
+	<td>username:</td>
+	<td><input type="text" placeholder="enter user name"><br></td>
+	</tr>
+	<tr>
+    <td>DOB:</td>
+	<td><input type="date"><br></td>
+	</tr>
+    <tr>
+    <td>Gender:</td>
+	<td><input type="radio" name="x">female
+          <input type="radio" name="x">male<br></td>
+    </tr>
+	<tr>
+    <td>pincode:</td>
+	<td><input type="text"><br></td>
+	</tr>
+	<tr>
+    <td>Address:</td>
+	<td><textarea></textarea><br></td>
+	</tr>
+	<tr>
+	
+   <td>Email:</td>
+	<td><textarea></textarea><br></td>
+	</tr>
+	<tr>
+    <td>Password:</td>
+	<td><input type="password" name="password" value="password" placeholder="Enter Password"></td>
+	</tr>
+	
+	<tr>
+   <td>City:</td>
+    <td><select>
+        <option>Ahmedabad</option><br>
+        <option>Mumbai</option><br>
+        <option>Hyderabad</option><br>
+		</select><br>
+		</td>
+		</tr>
+		<tr>
+   <td>State:</td>
+   <td><select>
+         <option>Telangana</option><br>
+		 <option>Kerala</option><br>
+		 <option>Jammu and Kashmir</option><br>
+		 </select><br>
+		 </td>
+		 </tr>
+		 <tr>
+   <td>country:</td>
+   <td><select>
+          <option>India</option><br>
+		  <option>NewZealand</option<br>
+		  <option>London</option><br>
+		  </select><br>
+		  </td>
+		  <tr><br>
+   	<td><br><input type="submit"><br><br></td>
+	
+	<td> <br> <input type="reset"><br><br></td>
+	</tr>
+  </form>
+  
+  </table>
+  </center>
+ </body>
+</html>
